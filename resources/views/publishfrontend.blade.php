@@ -52,6 +52,7 @@
     <div class="col-md-6">
         <div class="card-custom">
             <a href="{{ url('/p1') }}" class="btn btn-custom">📘 Pertemuan 1</a>
+            <a href="{{ url('/template1') }}" class="btn btn-custom">📝 Template Bootstrap</a>
             <a href="{{ url('/p4') }}" class="btn btn-custom">📙 Pertemuan 4</a>
             <a href="{{ url('/tugaslinktree') }}" class="btn btn-custom">🌐 Tugas Linktree</a>
             <a href="{{ url('/p7part1') }}" class="btn btn-custom">📕 Pertemuan 7 - Part 1</a>

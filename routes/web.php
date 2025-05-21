@@ -45,3 +45,7 @@ Route::get('/ets', function () {
 Route::get('/tugaslinktree', function () {
     return view('tugaslinktree');
 });
+
+Route::get('/template1', function () {
+    return view('template1');
+});
