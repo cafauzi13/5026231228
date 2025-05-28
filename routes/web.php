@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Link;
-use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\Pegawai2Controller;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PegawaiController;
+
 
 Route::get('halo', function () {
     return 'Selamat datang di Laravel';
@@ -54,12 +56,15 @@ Route::get('/template1', function () {
 
 //selalu beri comment untuk route yang setipe. karena sampai akhir nanti kita hanya pake yang route kalo ga comment nanti kalian yang kesulitan
 //pegawai
-Route::get('dosen', [Link::class, 'index']);
-Route::get('/pegawai/{nama}', [PegawaiController::class, 'index']);
-Route::get('formulir', [PegawaiController::class, 'formulir']);
-Route::post('formulir/proses', [PegawaiController::class, 'proses']);
+//Route::get('dosen', [Link::class, 'index']);
+//Route::get('/pegawai/{nama}', [Pegawai2Controller::class, 'index']);
+//Route::get('formulir', [Pegawai2Controller::class, 'formulir']);
+//Route::post('formulir/proses', [Pegawai2Controller::class, 'proses']);
 
 //blog
-Route::get('/blog', [BlogController::class, 'home']);
-Route::get('/blog/tentang', [BlogController::class, 'tentang']);
-Route::get('/blog/kontak', [BlogController::class, 'kontak']);
+//Route::get('/blog', [BlogController::class, 'home']);
+//Route::get('/blog/tentang', [BlogController::class, 'tentang']);
+//Route::get('/blog/kontak', [BlogController::class, 'kontak']);
+
+//crud pegawai
+Route::get('/pegawai', [PegawaiController::class, 'index']);
