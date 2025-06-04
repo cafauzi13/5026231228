@@ -68,3 +68,6 @@ Route::get('/template1', function () {
 
 //crud pegawai
 Route::get('/pegawai', [PegawaiController::class, 'index']);
+Route::get('/tambah', [PegawaiController::class, 'index']);
+Route::get('/edit', [PegawaiController::class, 'index']);
+
