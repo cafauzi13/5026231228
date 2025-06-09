@@ -74,3 +74,18 @@ Route::post('/pegawai/store', [PegawaiController::class, 'store']);
 Route::post('/pegawai/update', [PegawaiController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus']);
 Route::get('/pegawai/cari', [PegawaiController::class, 'cari']);
+
+//CRUD Sofa
+use App\Http\Controllers\SofaController;
+
+Route::get('/sofa', [SofaController::class, 'index']);
+Route::get('/sofa/tambah', [SofaController::class, 'tambah']);
+Route::post('/sofa/store', [SofaController::class, 'store']);
+Route::get('/sofa/edit/{id}', [SofaController::class, 'edit']);
+Route::post('/sofa/update', [SofaController::class, 'update']);
+Route::get('/sofa/hapus/{id}', [SofaController::class, 'hapus']);
+Route::get('/sofa/cari', [SofaController::class, 'cari']);
+Route::get('/sofa/autocomplete', [SofaController::class, 'autocomplete']);
+Route::get('/sofa/find/{merk}', [SofaController::class, 'findByMerk']);
+
+
