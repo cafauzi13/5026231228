@@ -17,7 +17,7 @@
         body {
             background: #d0f0e8;
             font-family: 'Poppins', sans-serif;
-            color: #264653; 
+            color: #264653;
         }
         .navbar-nav .nav-link {
             color: #2a9d8f; /* Bootstrap teal-ish */
@@ -96,7 +96,7 @@
                     <a class="nav-link" href="#">EAS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Latihan 1</a>
+                    <a class="nav-link" href="/keranjang">Latihan 1</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Latihan 2</a>

@@ -89,3 +89,15 @@ Route::get('/sofa/autocomplete', [SofaController::class, 'autocomplete']);
 Route::get('/sofa/find/{merk}', [SofaController::class, 'findByMerk']);
 
 
+//CRUD KeranjangBelanja
+
+use App\Http\Controllers\KeranjangBelanjaController;
+
+Route::get('/keranjang', [KeranjangBelanjaController::class, 'index'])->name('keranjang.index');
+Route::get('/keranjang/create', [KeranjangBelanjaController::class, 'create'])->name('keranjang.create');
+Route::post('/keranjang', [KeranjangBelanjaController::class, 'store'])->name('keranjang.store');
+Route::delete('/keranjang/{id}', [KeranjangBelanjaController::class, 'destroy'])->name('keranjang.destroy');
+Route::get('/keranjang/cari', [KeranjangBelanjaController::class, 'cari'])->name('keranjang.cari');
+
+
+
