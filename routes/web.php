@@ -100,4 +100,13 @@ Route::delete('/keranjang/{id}', [KeranjangBelanjaController::class, 'destroy'])
 Route::get('/keranjang/cari', [KeranjangBelanjaController::class, 'cari'])->name('keranjang.cari');
 
 
+//CRUD Karyawan
+use App\Http\Controllers\KaryawanController;
+
+Route::get('/karyawan', [KaryawanController::class, 'index']);
+Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
+Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+Route::post('/karyawan/update', [KaryawanController::class, 'update']);
+Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus']);
+Route::get('/karyawan/cari', [KaryawanController::class, 'cari']);
 
