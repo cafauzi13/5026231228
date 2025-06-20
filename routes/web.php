@@ -124,3 +124,11 @@ use App\Http\Controllers\PageCounterController;
 
 Route::get('/pagecounter', [PageCounterController::class, 'show']);
 
+//CRUD Karyawan
+use App\Http\Controllers\myKaryawanController;
+
+Route::get('/mykaryawan', [myKaryawanController::class, 'index']);
+Route::post('/mykaryawan/update', [myKaryawanController::class, 'update']);
+Route::get('/mykaryawan/edit/{id}', [myKaryawanController::class, 'edit']);
+Route::get('/mykaryawan/view/{id}', [myKaryawanController::class, 'view']);
+Route::post('/mykaryawan/store/', [myKaryawanController::class, 'store']);

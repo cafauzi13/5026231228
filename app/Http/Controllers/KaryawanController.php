@@ -25,6 +25,13 @@ class KaryawanController extends Controller
 		return view('tambahkaryawan');
 	}
 
+     // Menampilkan data karyawan yang ingin diedit
+    public function edit($kodepegawai)
+    {
+        $karyawan = DB::table('mykaryawan')->where('kodepegawai', $kodepegawai)->first();
+        return view('karyawan.edit', ['karyawan' => $karyawan]);
+    }
+
 	// method untuk insert data ke table
 	public function store(Request $request)
 	{
@@ -100,4 +107,11 @@ class KaryawanController extends Controller
 		return view('indexkaryawan',['karyawan' => $namalengkap,'cari'=>$cari]);
 
 	}
+
+     public function view($kodepegawai)
+    {
+        $karyawan = DB::table('mykaryawan')->where('kodepegawai', $kodepegawai)->first();
+        return view('karyawan.view', ['karyawan' => $karyawan]);
+    }
 }
+
