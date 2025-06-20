@@ -31,5 +31,4 @@
 		@endforeach
 	</table>
     	<a href="/karyawan/tambah" class="btn btn-primary mb-3"> + Tambah karyawan Baru</a>
-{{$karyawan->links()}}
     @endsection

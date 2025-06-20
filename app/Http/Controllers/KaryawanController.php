@@ -11,7 +11,7 @@ class KaryawanController extends Controller
     	// mengambil data dari table
 		$karyawan = DB::table('karyawan')
         ->select('kodepegawai', DB::raw('UPPER(namalengkap) as namalengkap'), 'divisi', DB::raw('LOWER(departemen) as departemen'))
-        ->paginate(10);
+        ->get();
 
     	// mengirim data  ke view index
 		return view('indexkaryawan',['karyawan' => $karyawan]);
@@ -92,12 +92,12 @@ class KaryawanController extends Controller
 		$cari = $request->cari;
 
     		// mengambil data dari table  sesuai pencarian data
-		$makanan = DB::table('karyawan')
+		$namalengkap = DB::table('karyawan')
 		->where('namalengkap','like',"%".$cari."%")
-		->paginate();
+		->get();
 
     		// mengirim data  ke view index
-		return view('indexkaryawan',['karyawan' => $karyawan,'cari'=>$cari]);
+		return view('indexkaryawan',['karyawan' => $namalengkap,'cari'=>$cari]);
 
 	}
 }

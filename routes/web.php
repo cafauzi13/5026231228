@@ -110,3 +110,17 @@ Route::post('/karyawan/update', [KaryawanController::class, 'update']);
 Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus']);
 Route::get('/karyawan/cari', [KaryawanController::class, 'cari']);
 
+//CRUD Siswa
+use App\Http\Controllers\SiswaController;
+
+Route::get('/siswa', [SiswaController::class, 'index']);
+Route::get('/siswa/tambah', [SiswaController::class, 'tambah']);
+Route::post('/siswa/store', [SiswaController::class, 'store']);
+Route::post('/siswa/update', [SiswaController::class, 'update']);
+Route::get('/siswa/hapus/{nis}', [SiswaController::class, 'hapus']);
+Route::get('/siswa/cari', [SiswaController::class, 'cari']);
+
+use App\Http\Controllers\PageCounterController;
+
+Route::get('/pagecounter', [PageCounterController::class, 'show']);
+

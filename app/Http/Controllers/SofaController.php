@@ -61,7 +61,7 @@ class SofaController extends Controller
 
     public function autocomplete(Request $request)
 {
-    $keyword = $request->get('term'); // Bootstrap autocomplete kirim pakai 'term'
+    $keyword = $request->get('term'); 
     $data = DB::table('sofa')
         ->where('merk', 'LIKE', "%$keyword%")
         ->pluck('merk');

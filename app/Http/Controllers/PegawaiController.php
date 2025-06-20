@@ -31,6 +31,8 @@ class PegawaiController extends Controller
 	// method untuk insert data ke table pegawai
 	public function store(Request $request)
 	{
+
+       
 		// insert data ke table pegawai
 		DB::table('pegawai')->insert([
 			'pegawai_nama' => $request->nama,
